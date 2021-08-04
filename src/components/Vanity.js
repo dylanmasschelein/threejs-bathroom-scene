@@ -1,4 +1,4 @@
-const Box = (props) => {
+const Vanity = (props) => {
   return (
     <mesh position={[-5.5, 2, -3.75]}>
       <boxGeometry args={[4, 4, 2.5]} />
@@ -7,4 +7,4 @@ const Box = (props) => {
   );
 };
 
-export default Box;
+export default Vanity;

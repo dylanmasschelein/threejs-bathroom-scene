@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import { useLoader } from "@react-three/fiber";
 // import floor from "./assets/images/floor.jpg";
-import hardwood from "./assets/images/hardwood.png";
+import hardwood from "../assets/images/hardwood.png";
 
 const Floor = () => {
   const texture = useLoader(THREE.TextureLoader, hardwood);

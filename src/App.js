@@ -3,9 +3,11 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Stars } from "@react-three/drei";
 import { Suspense } from "react";
 // import { Physics } from "@react-three/cannon";
-import Box from "./Box";
-import Floor from "./Floor";
-import Wall from "./Wall";
+import Vanity from "./components/Vanity";
+import Floor from "./components/Floor";
+import Wall from "./components/Wall";
+import Drawer from "./components/Drawer";
+import VanityHandles from "./components/VanityHandles";
 
 const App = () => {
   return (
@@ -16,7 +18,13 @@ const App = () => {
         <ambientLight intensity={0.5} />
         <spotLight position={[10, 15, 10]} angle={0.3} />
         <pointLight intensity={1.12} position={[0, 0, 0]} />
-        <Box />
+        <Vanity />
+
+        <Drawer position={[-5.5, 3, -2.5]} />
+        <Drawer position={[-5.5, 1.3, -2.5]} />
+
+        <VanityHandles />
+
         <Suspense fallback={null}>
           <Floor />
           <Wall position={[0, 5, -5]} rotation={[0, 0, 0]} args={[15, 10]} />
