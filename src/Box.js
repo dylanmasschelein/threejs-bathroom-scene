@@ -1,28 +1,21 @@
-import { useFrame } from "@react-three/fiber";
-import { useRef } from "react";
+// import { useBox } from "@react-three/cannon";
 
-const Box = () => {
-  const meshRef = useRef();
-  useFrame(() => (meshRef.current.rotation.z += 0.01));
+const Box = (props) => {
+  //   const meshRef = useRef();
+  //   const [ref, api] = useBox(() => ({ mass: 1, position: [0, 2, 0], ...props }));
+  //   useFrame(() => (meshRef.current.rotation.z += 0.01));
   return (
-    <mesh ref={meshRef}>
+    <mesh
+      //   onClick={() => {
+      //     api.velocity.set(0, 2, 0);
+      //   }}
+      //   ref={ref}
+      position={[0, 0.5, 0]}
+    >
       <boxGeometry args={[1, 1, 1]} />
-      {/* <boxBufferGeometry attach='geometry' position={[10, 10, 10]} /> */}
-      <meshLambertMaterial attach='material' color='blue' />
+      <meshStandardMaterial attach='material' color='blue' />
     </mesh>
   );
 };
-{
-  /* <mesh
-      {...props}
-      ref={mesh}
-      scale={active ? 1.5 : 1}
-      onClick={(event) => setActive(!active)}
-      onPointerOver={(event) => setHover(true)}
-      onPointerOut={(event) => setHover(false)}>
-      <boxGeometry args={[1, 2, 3]} />
-      <meshStandardMaterial color={hovered ? 'hotpink' : 'orange'} />
-    </mesh> */
-}
 
 export default Box;
