@@ -8,6 +8,7 @@ import Ceiling from "./components/General/Cieling";
 import Toilet from "./components/Toilet/Toilet";
 import { Suspense } from "react";
 import Walls from "./components/General/Walls";
+import TowelRack from "./components/TowelRack/TowlRack";
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
         <Vanity />
         <Shower />
         <Toilet />
+        <TowelRack />
       </Canvas>
     </div>
   );
