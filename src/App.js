@@ -9,6 +9,7 @@ import Toilet from "./components/Toilet/Toilet";
 import { Suspense } from "react";
 import Walls from "./components/General/Walls";
 import TowelRack from "./components/TowelRack/TowlRack";
+import PictureFrame from "./components/PictureFrame/PictureFrame";
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
         <Shower />
         <Toilet />
         <TowelRack />
+        <PictureFrame />
       </Canvas>
     </div>
   );
