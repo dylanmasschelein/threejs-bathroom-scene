@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import Flush from "./Flush";
 
-const Toilet = () => {
+const Toilet = ({ flush, setFlush }) => {
   const points = [];
   for (let i = 0; i < 10; ++i) {
     points.push(new THREE.Vector2(Math.sin(i * 0.2) * 3 + 3, (i - 5) * 0.4));
@@ -19,7 +19,7 @@ const Toilet = () => {
         >
           <meshStandardMaterial
             attach='material'
-            color='white'
+            color='#dedcdc'
             side={THREE.DoubleSide}
           />
         </mesh>
@@ -37,7 +37,8 @@ const Toilet = () => {
           <meshStandardMaterial attach='material' color='#dedcdc' />
         </mesh>
       </group>
-      <Flush />
+
+      <Flush setFlush={setFlush} flush={flush} />
     </>
   );
 };

@@ -1,6 +1,6 @@
 import * as THREE from "three";
 
-const Flush = () => {
+const Flush = ({ setFlush, flush }) => {
   const radiusTop = 0.05;
   const radiusBottom = 0.05;
   const height = 0.6;
@@ -14,6 +14,7 @@ const Flush = () => {
   );
   return (
     <mesh
+      onClick={() => setFlush(!flush)}
       rotation={[-Math.PI / -2, -Math.PI / -1.1, -Math.PI / -2]}
       geometry={handle}
       position={[-0.8, 2.2, -3.9]}
