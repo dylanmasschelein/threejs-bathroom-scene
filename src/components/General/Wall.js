@@ -6,7 +6,11 @@ const Wall = ({ position, args, rotation, tiles }) => {
   return (
     <mesh rotation={rotation} position={position}>
       <planeBufferGeometry attach='geometry' args={args} />
-      <meshBasicMaterial attach='material' map={texture} />
+      <meshBasicMaterial
+        attach='material'
+        map={texture}
+        side={THREE.DoubleSide}
+      />
     </mesh>
   );
 };

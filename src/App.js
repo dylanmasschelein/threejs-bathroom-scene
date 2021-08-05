@@ -5,6 +5,7 @@ import Vanity from "./components/Vanity/Vanity";
 import Shower from "./components/Shower/Shower";
 import Floor from "./components/General/Floor";
 import Ceiling from "./components/General/Cieling";
+import Toilet from "./components/Toilet/Toilet";
 import { Suspense } from "react";
 import Walls from "./components/General/Walls";
 
@@ -24,6 +25,7 @@ const App = () => {
         </Suspense>
         <Vanity />
         <Shower />
+        <Toilet />
       </Canvas>
     </div>
   );

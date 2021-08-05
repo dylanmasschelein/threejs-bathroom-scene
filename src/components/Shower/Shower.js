@@ -10,7 +10,7 @@ const Shower = () => {
       <GlassDoor position={[3, 4, -2.5]} opacity={0.7} />
       <GlassDoor position={[3.1, 4, 0]} opacity={0.3} />
       <Control position={[5.5, 0.8, -4.6]} />
-      <ShowerHead position={[5.5, 4.3, -1]} />
+      <ShowerHead position={[5.5, 4.25, -1]} />
       <Suspense>
         <ShowerFloorTile />
       </Suspense>
