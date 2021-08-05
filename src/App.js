@@ -4,6 +4,7 @@ import { OrbitControls, Stars } from "@react-three/drei";
 import Vanity from "./components/Vanity/Vanity";
 import Shower from "./components/Shower/Shower";
 import Floor from "./components/General/Floor";
+import Ceiling from "./components/General/Cieling";
 import { Suspense } from "react";
 import Walls from "./components/General/Walls";
 
@@ -17,8 +18,9 @@ const App = () => {
         <spotLight position={[10, 15, 10]} angle={0.3} />
         <pointLight intensity={1.12} position={[0, 0, 0]} />
         <Suspense fallback={null}>
-          <Floor />
           <Walls />
+          <Floor />
+          <Ceiling />
         </Suspense>
         <Vanity />
         <Shower />

@@ -1,11 +1,11 @@
-const GlassDoor = () => {
+const GlassDoor = ({ position, opacity }) => {
   return (
-    <mesh position={[3, 4, -2.5]}>
+    <mesh position={position}>
       <boxGeometry args={[0, 8, 5]} />
       <meshPhongMaterial
         attach='material'
         color='0xffffff'
-        opacity={0.5}
+        opacity={opacity}
         transparent={true}
       />
     </mesh>

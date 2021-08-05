@@ -1,9 +1,8 @@
 import * as THREE from "three";
 import { useLoader } from "@react-three/fiber";
-import wallTiles from "../../assets/images/wallTiles.jpg";
 
-const Wall = ({ position, args, rotation }) => {
-  const texture = useLoader(THREE.TextureLoader, wallTiles);
+const Wall = ({ position, args, rotation, tiles }) => {
+  const texture = useLoader(THREE.TextureLoader, tiles);
   return (
     <mesh rotation={rotation} position={position}>
       <planeBufferGeometry attach='geometry' args={args} />
