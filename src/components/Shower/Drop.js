@@ -8,22 +8,13 @@ const Drops = () => {
 
   const randomDrop = () => {
     return Math.random() * 3;
-    // let random = Math.random() * 3
-    // if (random <= 1 && random >= -1) {
-    //   return random;
-    // } else {
-
-    // }
-    // return;
   };
-
-  console.log(randomDrop());
 
   return (
     <mesh
       position={[randomDrop(), randomDrop(), randomDrop()]}
       geometry={drop}
-      scale={0.01}
+      scale={0.0075}
     >
       <meshStandardMaterial attach='material' color='blue' />
     </mesh>

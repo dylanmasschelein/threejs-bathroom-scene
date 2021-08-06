@@ -1,6 +1,6 @@
 import * as THREE from "three";
 
-const Control = ({ position, water, setWater }) => {
+const Control = ({ position, water, setWater, toggle }) => {
   const radius = 2.0;
   const height = 3.4;
   const radialSegments = 50;
@@ -24,7 +24,11 @@ const Control = ({ position, water, setWater }) => {
         scale={0.2}
         rotation={[Math.PI / 2, 0, 0]}
       >
-        <meshStandardMaterial attach='material' color='gold' />
+        <meshStandardMaterial
+          attach='material'
+          color={toggle ? "gold" : "black"}
+          metalness={0.5}
+        />
       </mesh>
       <mesh
         onClick={() => setWater(!water)}
@@ -33,7 +37,11 @@ const Control = ({ position, water, setWater }) => {
         scale={0.2}
         rotation={[0, 0, -Math.PI / 1.1]}
       >
-        <meshStandardMaterial attach='material' color='black' />
+        <meshStandardMaterial
+          attach='material'
+          color={toggle ? "black" : "white"}
+          metalness={0.5}
+        />
       </mesh>
     </group>
   );

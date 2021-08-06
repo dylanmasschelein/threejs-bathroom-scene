@@ -1,6 +1,6 @@
 import * as THREE from "three";
 
-const Flush = ({ setFlush, flush }) => {
+const Flush = ({ setFlush, flush, toggle }) => {
   const radiusTop = 0.05;
   const radiusBottom = 0.05;
   const height = 0.6;
@@ -20,7 +20,7 @@ const Flush = ({ setFlush, flush }) => {
       position={[-0.8, 2.2, -3.9]}
       castShadow
     >
-      <meshStandardMaterial color={"gold"} metalness={0.1} />
+      <meshStandardMaterial color={toggle ? "gold" : "black"} metalness={0.5} />
     </mesh>
   );
 };

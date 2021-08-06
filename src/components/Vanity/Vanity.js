@@ -6,7 +6,7 @@ import Sink from "./Sink";
 import Facet from "./Facet";
 import { useState } from "react";
 
-const Vanity = () => {
+const Vanity = ({ toggle }) => {
   const [open, setOpen] = useState(false);
   return (
     <>
@@ -18,9 +18,9 @@ const Vanity = () => {
       />
       <Drawer open={open} setOpen={setOpen} position={[-5.5, 1.3, -3.3]} />
 
-      <Facet position={[-5.5, 2.9, -4.8]} />
+      <Facet position={[-5.5, 2.9, -4.8]} toggle={toggle} />
 
-      <VanityHandles open={open} />
+      <VanityHandles open={open} toggle={toggle} />
 
       <Sink />
     </>

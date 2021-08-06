@@ -1,6 +1,6 @@
 import * as THREE from "three";
 
-const Handle = ({ position }) => {
+const Handle = ({ position, toggle }) => {
   const radiusTop = 0.05;
   const radiusBottom = 0.05;
   const height = 1;
@@ -28,7 +28,10 @@ const Handle = ({ position }) => {
         position={[0, 2, 0]}
         castShadow
       >
-        <meshStandardMaterial color={"gold"} metalness={0.1} />
+        <meshStandardMaterial
+          color={toggle ? "gold" : "black"}
+          metalness={0.5}
+        />
       </mesh>
       <mesh
         rotation={[-Math.PI / -2, 0, 0]}
@@ -36,7 +39,10 @@ const Handle = ({ position }) => {
         position={[-0.4, 2, -0.12]}
         castShadow
       >
-        <meshStandardMaterial color={"gold"} metalness={0.1} />
+        <meshStandardMaterial
+          color={toggle ? "gold" : "black"}
+          metalness={0.5}
+        />
       </mesh>
       <mesh
         rotation={[-Math.PI / -2, 0, 0]}
@@ -44,7 +50,10 @@ const Handle = ({ position }) => {
         position={[0.4, 2, -0.12]}
         castShadow
       >
-        <meshStandardMaterial color={"gold"} metalness={0.1} />
+        <meshStandardMaterial
+          color={toggle ? "gold" : "black"}
+          metalness={0.5}
+        />
       </mesh>
     </group>
   );

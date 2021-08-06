@@ -1,7 +1,6 @@
 import * as THREE from "three";
-import { useState } from "react";
 
-const ShowerHead = ({ position }) => {
+const ShowerHead = ({ position, toggle }) => {
   const height = 4;
   const radialSegments = 50;
 
@@ -36,7 +35,11 @@ const ShowerHead = ({ position }) => {
         scale={0.2}
         rotation={[0, 0, 0]}
       >
-        <meshStandardMaterial attach='material' color='gold' />
+        <meshStandardMaterial
+          attach='material'
+          color={toggle ? "gold" : "black"}
+          metalness={0.5}
+        />
       </mesh>
       <mesh
         position={[0, 5.3, 0]}
@@ -44,7 +47,11 @@ const ShowerHead = ({ position }) => {
         scale={0.2}
         rotation={[0, 0, 0]}
       >
-        <meshStandardMaterial attach='material' color='gold' />
+        <meshStandardMaterial
+          attach='material'
+          color={toggle ? "gold" : "black"}
+          metalness={0.5}
+        />
       </mesh>
       <mesh
         position={[0, 4, 0]}
@@ -54,8 +61,9 @@ const ShowerHead = ({ position }) => {
       >
         <meshStandardMaterial
           attach='material'
-          color='gold'
+          color={toggle ? "gold" : "black"}
           side={THREE.DoubleSide}
+          metalness={0.5}
         />
       </mesh>
     </group>
